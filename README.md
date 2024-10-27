@@ -45,7 +45,7 @@ ssh -i "path-to-key.pem" ec2-user@public-ip
 Replace `"path-to-key.pem"` with the full path to your downloaded key file, and `public-ip` with your instance’s IP address.
 
 ---
-
+![AltText](Screenshot%202024-10-27%20094733.png)
 ## Preparing the Java Environment
 
 ### Step 1: Installing Java and Maven
@@ -101,13 +101,16 @@ java -jar AWSObjectDetection.jar
 ```
 
 Once executed, this program will analyze images, detect objects, and print the detection results. You can also verify these detections in the **AWS Console** where a message queue is created, and results are available by selecting the "Polling for messages" option.
-
+![AltText](Screenshot%202024-10-27%20094752.png)
+![AltText](Screenshot%202024-10-27%20094809.png)
 ### Text Detection (EC2-B)
 
 On the EC2-B instance, run the text detection program and direct the output to a file:
 
 ```bash
 java -jar AWSTextRekognition.jar > output.txt
+
 ```
+![AltText](Screenshot%202024-10-27%20094912.png)
 
 This captures the output into `output.txt`, allowing you to view the detected text results in a single, consolidated file.
